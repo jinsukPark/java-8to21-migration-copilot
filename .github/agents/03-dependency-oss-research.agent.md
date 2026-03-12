@@ -30,3 +30,9 @@ tools: ["read", "search", "edit", "runCommands"]
 - 旧式テスト基盤
 - JDBC / Logging / XMLライブラリ
 - Maven / Gradle plugin
+
+追加ルール:
+- 依存関係の一部だけで全体判断しないこと
+- 直接依存だけでなく、plugin、BOM、親POM、ビルドスクリプトの影響も確認すること
+- 調査結果には「確認済み依存」と「未確認依存」を分けて記載すること
+- Java 21互換性が不明な場合は、推定ではなく「要追加確認」と明記すること
